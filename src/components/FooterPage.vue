@@ -8,8 +8,8 @@ import IconLinkedin from '@/components/icons/IconLinkedin.vue'
 import { RouterLink } from 'vue-router'
 </script>
 <template>
-  <footer class="container space-y-10 pt-20 lg:grid lg:grid-cols-4 lg:gap-8 lg:space-y-0">
-    <IconLogo class="mx-8 lg:col-span-1" />
+  <footer class=" pt-20 lg:grid lg:grid-cols-4 lg:gap-8 lg:space-y-0 bg-blue-50">
+    <IconLogo class="mx-8 ml-20 lg:col-span-1" />
     <nav
       class="px-5 columns-2 gap-8 space-y-8 lg:columns-3 lg:col-span-3 lg:px-0 *:break-inside-avoid *:space-y-3"
     >

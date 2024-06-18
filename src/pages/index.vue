@@ -5,6 +5,18 @@ import Star from '@/components/icons/Star.vue'
 import CardMiffy from '@/components/CardMiffy.vue'
 import CardKitty from '@/components/CardKitty.vue'
 import CardNin from '@/components/CardNin.vue'
+import CardIkea from '@/components/CardIkea.vue'
+import Line from '@/components/icons/Line.vue'
+import { ref } from 'vue'
+
+const faqs = ref([
+  { question: "Are those plushies real?", answer: "No, this is a personal project and everything is fake. You can't buy them.", open: false },
+  { question: "Can you really ship them?", answer: "No. Nothing won't be sold nor shipped. This website is only for display.", open: false }
+]);
+
+function toggleFAQ(index: number) {
+  faqs.value[index].open = !faqs.value[index].open;
+}
 </script>
 
 <template>
@@ -82,9 +94,35 @@ import CardNin from '@/components/CardNin.vue'
    <div class="bg-paasul-pink3 grid grid-cols-12">
 <CardMiffy class=" col-span-4 col-start-2 mt-20 mb-20"/>
 <CardKitty class=" col-span-4 col-start-8 mt-44 mb-20"/>
-<CardNin class=" col-span-4 col-start-2 mt-28 mb-20"/>
-
+<CardNin class=" col-span-4 col-start-2 mt-8 mb-20"/>
+<CardIkea class=" col-span-4 col-start-8 mt-32 mb-20"/>
    </div>
+
+<div class="bg-paasul-pink2 grid grid-cols-12 gap-4">
+    <div class="col-span-12 col-start-2 col-end-8">
+      <h2 class="font-kaisei text-4xl text-left py-8 mt-16">Frequently asked questions</h2>
+      <Line />
+      <p class="text-left mt-9 mb-9 font-poppins text-gray-600">Get all your questions answered!</p>
+      <div v-for="(faq, index) in faqs" :key="index" class="mb-4">
+        <button @click="toggleFAQ(index)" class="w-full text-left flex justify-between items-center p-4 bg-blue-100 rounded-lg shadow">
+          <span class="font-poppins text-lg text-gray-700">{{ faq.question }}</span>
+          <svg v-if="!faq.open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+          <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+          </svg>
+        </button>
+        <div v-if="faq.open" class="mt-2 pl-4 pr-4 pb-4 text-gray-600 text-sm font-poppins bg-blue-100/50 rounded-lg">
+          {{ faq.answer }}
+        </div>
+      </div>
+    </div>
+    <div class="col-start-8 col-end-12">
+      <img src="/public/img/bon-ton-toys_bt24182519-removebg-preview.png" alt="faq" class="w-full h-auto mt-9 mb-9" />
+    </div>
+  </div>
+
 
 </template>
 

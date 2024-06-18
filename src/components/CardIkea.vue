@@ -8,15 +8,15 @@ import Star from '@/components/icons/Star.vue'
 <template>
   <div class="bg-white shadow-lg rounded-lg p-4 w-full ">
     <img
-      src="/public/img/4bdcf01bddc624430a75e9ce0b9d5024.jpg"
+      src="/public/img/my-11134207-7r98o-lovbzyqqjuew3a.jpg"
       alt="Miffy Plushes"
       class="rounded-lg"
     />
 <div class="flex flex-col justify-start mt-4">
   <div class="flex justify-between items-center">
     <div>
-      <h2 class="text-xl font-bold font-poppins">Nintendo plushes</h2>
-      <p class="text-sm text-gray-600 font-poppins">Enter the geek world of Nintendo!</p>
+      <h2 class="text-xl font-bold font-poppins">Ikea plushes</h2>
+      <p class="text-sm text-gray-600 font-poppins">Enter the simple world of Ikea!</p>
     </div>
     <button
       class="bg-pink-300 hover:bg-pink-400 text-white font-bold font-poppins py-2 px-4 rounded-full transition duration-300 ease-in-out"
