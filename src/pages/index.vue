@@ -2,6 +2,9 @@
 import { defineProps } from 'vue'
 import Scribble from '@/components/icons/Scribble.vue'
 import Star from '@/components/icons/Star.vue'
+import CardMiffy from '@/components/CardMiffy.vue'
+import CardKitty from '@/components/CardKitty.vue'
+import CardNin from '@/components/CardNin.vue'
 </script>
 
 <template>
@@ -42,7 +45,7 @@ import Star from '@/components/icons/Star.vue'
       are made with high-quality materials and capture the essence of each character's spirit. Perfect for fans of all
       ages, they’re not just toys, but keepsakes.</p>
     <img src="/public/img/shop.jpg" alt="miffy plushies"
-      class="col-span-12 col-start-2 col-end-6 mb-11 w-full h-auto" />
+      class="col-span-12 col-start-2 col-end-6 mb-20 w-full h-auto" />
 
     <div class="col-span-12 col-start-2 col-end-12 flex flex-row items-start space-x-4">
       <div class="flex flex-col space-y-4">
@@ -69,20 +72,22 @@ import Star from '@/components/icons/Star.vue'
       <img src="/public/img/cinnaquestion.png" alt="Cinna Plushies" class="h-96 object-cover">
     </div>
   </div>
+
+
+  <div class="bg-white grid grid-cols-12">
+    <h2 class="font-kaisei text-4xl text-center py-8 col-span-12 mb-5 mt-16">Cuddly companions for everyone</h2>
+    <p class="col-span-12 font-poppins text-gray-600 text-center mb-24">Bring the new joy home !</p>
+   </div>
+
+   <div class="bg-paasul-pink3 grid grid-cols-12">
+<CardMiffy class=" col-span-4 col-start-2 mt-20 mb-20"/>
+<CardKitty class=" col-span-4 col-start-8 mt-44 mb-20"/>
+<CardNin class=" col-span-4 col-start-2 mt-28 mb-20"/>
+
+   </div>
+
 </template>
 
 <style scoped>
 .scribble {}
-</style>
-
-
-<style scoped>
-.scribble {}
-</style>
-
-
-
-<style scoped>
-.scribble {
-}
 </style>

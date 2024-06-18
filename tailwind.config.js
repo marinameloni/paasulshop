@@ -11,7 +11,8 @@ export default {
     extend: {
       colors: {
         'paasul-pink1': '#EED4D0',
-        'paasul-pink2': '#F4E7E8'
+        'paasul-pink2': '#F4E7E8',
+        'paasul-pink3': '#EECECA',
       }
     } // Removed the comment and correctly closed the theme object here
   },
